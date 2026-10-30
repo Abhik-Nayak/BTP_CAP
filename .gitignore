@@ -1,1 +1,30 @@
-node_modules
+# Dependencies
+node_modules/
+
+# CAP build output
+gen/
+
+# MTA build output
+mta_archives/
+.mta/
+*.mtar
+*.mtar.zip
+
+# Fiori build output
+dist/
+
+# Local SQLite database
+*.sqlite
+*.db
+
+# Secrets and local credentials (NEVER commit)
+default-env.json
+.env
+.cdsrc-private.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+CLAUDE.md
