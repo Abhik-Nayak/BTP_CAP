@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@sap/cds": "^10"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^3.1.2"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "private": true,
+   "cds": {
+    "requires": {
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "admin1": { "password": "admin1", "roles": ["Admin"] },
+            "user1":  { "password": "user1",  "roles": ["User"] }
+          }
+        }
+      }
+    }
+  }
+}

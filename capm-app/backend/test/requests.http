@@ -1,0 +1,38 @@
+@server = http://localhost:4004
+@svc = {{server}}/odata/v4/request
+
+### 1. Metadata (no user)
+GET {{svc}}/$metadata
+
+### 2. List as admin1
+GET {{svc}}/Requests
+Authorization: Basic admin1:admin1
+
+### 3. List as user1
+GET {{svc}}/Requests
+Authorization: Basic user1:user1
+
+### 4. Create as user1 (tries to fake createdBy)
+POST {{svc}}/Requests
+Authorization: Basic user1:user1
+Content-Type: application/json
+
+{
+  "title": "Need a keyboard",
+  "description": "Old one is broken",
+  "priority": "Medium",
+  "createdBy": "hacker"
+}
+
+### 5. Update as admin1
+PATCH {{svc}}/Requests(11111111-1111-1111-1111-111111111111)
+Authorization: Basic admin1:admin1
+Content-Type: application/json
+
+{
+  "status": "InProgress"
+}
+
+### 6. Delete as admin1
+DELETE {{svc}}/Requests(22222222-2222-2222-2222-222222222222)
+Authorization: Basic admin1:admin1
