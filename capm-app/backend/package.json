@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
-    "@sap/cds": "^10"
+    "@sap/cds": "^10",
+    "@sap/xssec": "^4"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^3.1.2"
@@ -12,16 +13,33 @@
     "start": "cds-serve"
   },
   "private": true,
-   "cds": {
+  "cds": {
     "requires": {
       "[development]": {
         "auth": {
           "kind": "mocked",
           "users": {
-            "admin1": { "password": "admin1", "roles": ["Admin"] },
-            "user1":  { "password": "user1",  "roles": ["User"] }
+            "admin1": {
+              "password": "admin1",
+              "roles": [
+                "Admin"
+              ]
+            },
+            "user1": {
+              "password": "user1",
+              "roles": [
+                "User"
+              ]
+            },
+            "guest1": {
+              "password": "guest1",
+              "roles": []
+            }
           }
         }
+      },
+      "[production]": {
+        "auth": "xsuaa"
       }
     }
   }

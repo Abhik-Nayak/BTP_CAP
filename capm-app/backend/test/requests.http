@@ -1,38 +1,61 @@
 @server = http://localhost:4004
 @svc = {{server}}/odata/v4/request
+@adminRow = 33333333-3333-3333-3333-333333333333
+@userRow  = 11111111-1111-1111-1111-111111111111
+@userRow2 = 22222222-2222-2222-2222-222222222222
 
-### 1. Metadata (no user)
-GET {{svc}}/$metadata
+### T1 anonymous → expect 401
+GET {{svc}}/Requests
 
-### 2. List as admin1
+### T2 guest1 (no roles) → expect 403
+GET {{svc}}/Requests
+Authorization: Basic guest1:guest1
+
+### T3 admin1 list → expect 200, 3 rows
 GET {{svc}}/Requests
 Authorization: Basic admin1:admin1
 
-### 3. List as user1
+### T4 user1 list → expect 200, 2 rows (own only)
 GET {{svc}}/Requests
 Authorization: Basic user1:user1
 
-### 4. Create as user1 (tries to fake createdBy)
+### T5 user1 reads OWN row by key → expect 200
+GET {{svc}}/Requests({{userRow}})
+Authorization: Basic user1:user1
+
+### T6 user1 reads ADMIN row by key → expect 404
+GET {{svc}}/Requests({{adminRow}})
+Authorization: Basic user1:user1
+
+### T7 user1 POST with fake createdBy → expect 201, createdBy = user1
 POST {{svc}}/Requests
 Authorization: Basic user1:user1
 Content-Type: application/json
 
 {
   "title": "Need a keyboard",
-  "description": "Old one is broken",
   "priority": "Medium",
   "createdBy": "hacker"
 }
 
-### 5. Update as admin1
-PATCH {{svc}}/Requests(11111111-1111-1111-1111-111111111111)
+### T8 user1 PATCH own row → expect 403
+PATCH {{svc}}/Requests({{userRow}})
+Authorization: Basic user1:user1
+Content-Type: application/json
+
+{ "status": "Done" }
+
+### T9 user1 DELETE own row → expect 403
+DELETE {{svc}}/Requests({{userRow}})
+Authorization: Basic user1:user1
+
+### T10 admin1 PATCH user1's row → expect 200
+PATCH {{svc}}/Requests({{userRow}})
 Authorization: Basic admin1:admin1
 Content-Type: application/json
 
-{
-  "status": "InProgress"
-}
+{ "status": "InProgress" }
 
-### 6. Delete as admin1
-DELETE {{svc}}/Requests(22222222-2222-2222-2222-222222222222)
+### T11 admin1 DELETE user1's row → expect 204
+DELETE {{svc}}/Requests({{userRow2}})
 Authorization: Basic admin1:admin1
