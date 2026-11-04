@@ -2,21 +2,31 @@
   "xsappname": "capm-requests",
   "tenant-mode": "dedicated",
   "scopes": [
-    { "name": "$XSAPPNAME.Admin", "description": "Admin" },
-    { "name": "$XSAPPNAME.User",  "description": "User" }
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Admin"
+    },
+    {
+      "name": "$XSAPPNAME.User",
+      "description": "User"
+    }
   ],
   "attributes": [],
   "role-templates": [
     {
       "name": "Admin",
       "description": "Full access to all requests",
-      "scope-references": ["$XSAPPNAME.Admin"],
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ],
       "attribute-references": []
     },
     {
       "name": "User",
       "description": "Create and read own requests",
-      "scope-references": ["$XSAPPNAME.User"],
+      "scope-references": [
+        "$XSAPPNAME.User"
+      ],
       "attribute-references": []
     }
   ],
@@ -24,12 +34,16 @@
     {
       "name": "App_Admin",
       "description": "Requests app - administrators",
-      "role-template-references": ["$XSAPPNAME.Admin"]
+      "role-template-references": [
+        "$XSAPPNAME.Admin"
+      ]
     },
     {
       "name": "App_User",
       "description": "Requests app - normal users",
-      "role-template-references": ["$XSAPPNAME.User"]
+      "role-template-references": [
+        "$XSAPPNAME.User"
+      ]
     }
   ],
   "oauth2-configuration": {
