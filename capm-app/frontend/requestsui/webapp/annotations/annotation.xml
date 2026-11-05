@@ -1,0 +1,118 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+        <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/odata/v4/request/$metadata">
+        <edmx:Include Namespace="RequestService"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="RequestService.Requests">
+
+                <!-- Object page header + list title -->
+                <Annotation Term="UI.HeaderInfo">
+                    <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="TypeName" String="Request"/>
+                        <PropertyValue Property="TypeNamePlural" String="Requests"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="title"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="status"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Filter bar fields -->
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>priority</PropertyPath>
+                        <PropertyPath>status</PropertyPath>
+                        <PropertyPath>createdBy</PropertyPath>
+                    </Collection>
+                </Annotation>
+
+                <!-- List report table columns -->
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Title"/>
+                            <PropertyValue Property="Value" Path="title"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Priority"/>
+                            <PropertyValue Property="Value" Path="priority"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Status"/>
+                            <PropertyValue Property="Value" Path="status"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Created By"/>
+                            <PropertyValue Property="Value" Path="createdBy"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Created At"/>
+                            <PropertyValue Property="Value" Path="createdAt"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+
+                <!-- Object page: one field group -->
+                <Annotation Term="UI.FieldGroup" Qualifier="Details">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Title"/>
+                                    <PropertyValue Property="Value" Path="title"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Description"/>
+                                    <PropertyValue Property="Value" Path="description"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Priority"/>
+                                    <PropertyValue Property="Value" Path="priority"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Status"/>
+                                    <PropertyValue Property="Value" Path="status"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+
+                <!-- Object page: section that shows the field group -->
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="ID" String="DetailsFacet"/>
+                            <PropertyValue Property="Label" String="Details"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Details"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+
+            </Annotations>
+                        <Annotations Target="RequestService.Requests/createdBy">
+                <Annotation Term="UI.HiddenFilter" Bool="false"/>
+            </Annotations>
+            <Annotations Target="RequestService.Requests/priority">
+                <Annotation Term="Common.Label" String="Priority"/>
+            </Annotations>
+            <Annotations Target="RequestService.Requests/status">
+                <Annotation Term="Common.Label" String="Status"/>
+            </Annotations>
+
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

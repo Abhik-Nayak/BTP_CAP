@@ -1,0 +1,28 @@
+{
+  "generationParameters": {
+    "generationDate": "Thu Nov 05 2026 05:07:29 GMT+0530 (India Standard Time)",
+    "generatorPlatform": "CLI",
+    "serviceType": "OData URL",
+    "metadataFilename": "",
+    "serviceUrl": "https://d333781etrial-dev-backend-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/request/",
+    "appName": "requestsui",
+    "appTitle": "Manage Requests",
+    "appDescription": "Fiori app for CAP requests",
+    "appNamespace": "com.demo",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.149.0",
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.32.0",
+    "template": "List Report Page V4",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "Requests"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}
