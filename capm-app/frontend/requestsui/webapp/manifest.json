@@ -8,6 +8,7 @@
       "version": "0.0.1"
     },
     "title": "{{appTitle}}",
+    "subTitle": "{{flpSubtitle}}",
     "description": "{{appDescription}}",
     "resources": "resources.json",
     "sourceTemplate": {
@@ -41,6 +42,8 @@
           "semanticObject": "CapmRequests",
           "action": "manage",
           "title": "{{flpTitle}}",
+          "subTitle": "{{flpSubtitle}}",
+          "icon": "sap-icon://request",
           "signature": {
             "parameters": {},
             "additionalParameters": "allowed"
