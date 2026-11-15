@@ -1,0 +1,101 @@
+ID,title,author,stock
+1,Wuthering Heights,Emily Brontë,12
+2,Jane Eyre,Charlotte Brontë,11
+3,The Raven,Edgar Allan Poe,333
+4,Eleonora,Edgar Allan Poe,555
+5,Catweazle,Richard Carpenter,22
+6,Pride and Prejudice,Jane Austen,45
+7,Sense and Sensibility,Jane Austen,32
+8,Emma,Jane Austen,28
+9,Mansfield Park,Jane Austen,19
+10,Persuasion,Jane Austen,24
+11,Dracula,Bram Stoker,40
+12,Frankenstein,Mary Shelley,35
+13,Oliver Twist,Charles Dickens,50
+14,David Copperfield,Charles Dickens,27
+15,Great Expectations,Charles Dickens,31
+16,A Tale of Two Cities,Charles Dickens,42
+17,The Great Gatsby,F. Scott Fitzgerald,60
+18,To Kill a Mockingbird,Harper Lee,38
+19,1984,George Orwell,55
+20,Animal Farm,George Orwell,48
+21,The Hobbit,J.R.R. Tolkien,70
+22,The Lord of the Rings,J.R.R. Tolkien,25
+23,The Catcher in the Rye,J.D. Salinger,33
+24,Moby Dick,Herman Melville,18
+25,The Odyssey,Homer,29
+26,The Iliad,Homer,21
+27,The Divine Comedy,Dante Alighieri,17
+28,Don Quixote,Miguel de Cervantes,14
+29,Les Misérables,Victor Hugo,26
+30,The Hunchback of Notre-Dame,Victor Hugo,30
+31,War and Peace,Leo Tolstoy,15
+32,Anna Karenina,Leo Tolstoy,23
+33,Crime and Punishment,Fyodor Dostoevsky,34
+34,The Brothers Karamazov,Fyodor Dostoevsky,20
+35,The Trial,Franz Kafka,37
+36,Metamorphosis,Franz Kafka,44
+37,The Stranger,Albert Camus,39
+38,The Plague,Albert Camus,16
+39,Little Women,Louisa May Alcott,41
+40,Anne of Green Gables,L.M. Montgomery,36
+41,The Secret Garden,Frances Hodgson Burnett,52
+42,Treasure Island,Robert Louis Stevenson,47
+43,Dr Jekyll and Mr Hyde,Robert Louis Stevenson,22
+44,Robinson Crusoe,Daniel Defoe,19
+45,Gulliver's Travels,Jonathan Swift,28
+46,The Time Machine,H.G. Wells,31
+47,The Invisible Man,H.G. Wells,43
+48,War of the Worlds,H.G. Wells,25
+49,The Picture of Dorian Gray,Oscar Wilde,32
+50,The Importance of Being Earnest,Oscar Wilde,18
+51,The Call of the Wild,Jack London,29
+52,White Fang,Jack London,34
+53,Of Mice and Men,John Steinbeck,40
+54,The Grapes of Wrath,John Steinbeck,21
+55,East of Eden,John Steinbeck,17
+56,The Old Man and the Sea,Ernest Hemingway,45
+57,A Farewell to Arms,Ernest Hemingway,27
+58,The Sun Also Rises,Ernest Hemingway,33
+59,The Sound and the Fury,William Faulkner,14
+60,As I Lay Dying,William Faulkner,19
+61,Heart of Darkness,Joseph Conrad,38
+62,Lord Jim,Joseph Conrad,24
+63,The Jungle,Upton Sinclair,16
+64,The Scarlet Letter,Nathaniel Hawthorne,31
+65,The House of the Seven Gables,Nathaniel Hawthorne,20
+66,Walden,Henry David Thoreau,26
+67,Civil Disobedience,Henry David Thoreau,42
+68,Leaves of Grass,Walt Whitman,35
+69,The Adventures of Tom Sawyer,Mark Twain,49
+70,Adventures of Huckleberry Finn,Mark Twain,53
+71,The Prince,Niccolò Machiavelli,30
+72,Utopia,Thomas More,22
+73,Paradise Lost,John Milton,18
+74,The Canterbury Tales,Geoffrey Chaucer,25
+75,Beowulf,Anonymous,13
+76,The Art of War,Sun Tzu,60
+77,The Republic,Plato,28
+78,Meditations,Marcus Aurelius,44
+79,The Alchemist,Paulo Coelho,75
+80,Siddhartha,Hermann Hesse,39
+81,Steppenwolf,Hermann Hesse,21
+82,The Little Prince,Antoine de Saint-Exupéry,56
+83,The Count of Monte Cristo,Alexandre Dumas,32
+84,The Three Musketeers,Alexandre Dumas,29
+85,Around the World in Eighty Days,Jules Verne,41
+86,Twenty Thousand Leagues Under the Sea,Jules Verne,37
+87,Journey to the Center of the Earth,Jules Verne,23
+88,The Jungle Book,Rudyard Kipling,46
+89,Kim,Rudyard Kipling,17
+90,The Wonderful Wizard of Oz,L. Frank Baum,34
+91,Peter Pan,J.M. Barrie,28
+92,Alice's Adventures in Wonderland,Lewis Carroll,51
+93,Through the Looking-Glass,Lewis Carroll,24
+94,The Wind in the Willows,Kenneth Grahame,19
+95,Black Beauty,Anna Sewell,33
+96,The Call of Cthulhu,H.P. Lovecraft,15
+97,The Shadow over Innsmouth,H.P. Lovecraft,12
+98,The Murders in the Rue Morgue,Edgar Allan Poe,27
+99,The Fall of the House of Usher,Edgar Allan Poe,31
+100,The Gold-Bug,Edgar Allan Poe,40
