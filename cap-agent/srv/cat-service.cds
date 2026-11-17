@@ -6,6 +6,7 @@
  */
 @agent
 @mcp
+@agent.connect: 'none'
 @odata
 service CatalogService {
   @readonly
