@@ -1,6 +1,6 @@
 import cds from '@sap/cds'
 
-export default class CatalogService extends cds.ApplicationService {
+export default class OrderService extends cds.ApplicationService {
   init() {
     const { Books } = this.entities
 

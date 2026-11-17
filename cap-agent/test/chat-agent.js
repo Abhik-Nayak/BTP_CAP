@@ -1,7 +1,7 @@
 // Run: node test/chat-agent.js "Order 2 copies of Catweazle"
 import readline from 'node:readline/promises'
 
-const AGENT_URL = 'http://localhost:4004/a2a/catalog'
+const AGENT_URL = 'http://localhost:4004/a2a/order'
 
 // Send one message to the agent and return the task
 async function send(text, taskId, contextId) {

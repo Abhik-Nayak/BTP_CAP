@@ -17,10 +17,23 @@
     "requires": {
       "llm": {
         "kind": "openai",
+        "model": "qwen3:4b-instruct",
+        "credentials": {
+          "baseURL": "http://localhost:11434/v1",
+          "apiKey": "ollama"
+        }
+      },
+      "llm-smart": {
+        "kind": "openai",
         "model": "qwen3:8b",
         "credentials": {
           "baseURL": "http://localhost:11434/v1",
           "apiKey": "ollama"
+        }
+      },
+      "[smart]": {
+        "llm": {
+          "model": "qwen3:8b"
         }
       },
       "[mock]": {
