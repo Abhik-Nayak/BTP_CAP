@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "@cap-js/agents": "^0.9.8",
+    "@cap-js/mcp": "^1.5.0",
     "@sap/cds": "^10"
   },
   "devDependencies": {
@@ -41,7 +42,8 @@
       }
     },
     "mcp": {
-      "per_action_tool": true
+      "per_action_tool": true,
+      "autowire": false
     }
   }
 }

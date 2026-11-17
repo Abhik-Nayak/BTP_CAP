@@ -5,6 +5,7 @@
  * When the user describes a story, topic or theme, call the searchBooks tool.
  */
 @agent
+@mcp
 @odata
 service CatalogService {
   @readonly
